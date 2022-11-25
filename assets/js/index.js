@@ -4,8 +4,11 @@ window.onload = function () {
    const h = date.getHours();
    const m = date.getMinutes();
    const time = `${h < 10 ? "0" + h.toString() : h.toString()}:${m < 10 ? "0" + m.toString() : m.toString()}`;
+   const respects_message = h < 12 ? "Bom Dia" : h < 18 ? "Boa Tarde" : "Boa Noite";
    const element = document.getElementById("time");
    element.innerText = time;
+   const respects = document.getElementById("respects");
+   respects.innerText = respects_message;
 
    let message = document.getElementById("message");
    let author = document.getElementById("author");
